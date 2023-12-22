@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- changed title to match website -->
     <title>Horiseon</title>
 </head>
 
 <body>
+    <!-- removed multiple classes and replaced multiple divs with better semantic elements -->
     <header>
         <h1>Hori<span class="seo">seo</span>n</h1>
         <nav>
@@ -24,12 +26,17 @@
             </ul>
         </nav>
     </header>
+    <!-- split up page by adding multiple sections for better organization and flow with css
+    also brought img to html side to go along with img selector -->
     <section>
         <figure class="hero">
             <img src="./assets/images/digital-marketing-meeting.jpg" alt="Four coworkers discussing a meeting" />
         </figure>
     </section>
-    <section>
+    <!-- initially brought aside to top to better go with float but ended up swapping all to flex
+    added better sections and article elements to break everything up into understandable elements
+    added alts to img for screen readers -->
+    <section class="mainSection">
         <aside class="benefits">
             <article class="benefit-lead">
                 <h3>Lead Generation</h3>
@@ -53,40 +60,44 @@
                 </p>
             </article>
         </aside>
+        <!-- removed all floats -->
         <section class="content">
             <article class="search-engine-optimization">
-                <img class="float-left" src="./assets/images/search-engine-optimization.jpg" alt="A journal for notes about SEO" />
-                <h2>Search Engine Optimization</h2>
-                <p>
-                    The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business.
-                </p>
+                <img src="./assets/images/search-engine-optimization.jpg" alt="A journal for notes about SEO" />
+                <summary>
+                    <h2>Search Engine Optimization</h2>
+                    <p>
+                        The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business.
+                    </p>
+                </summary>
             </article>
-        </section>
-        <section class="content">
             <article id="online-reputation-management" class="online-reputation-management">
-                <img class="float-right" src="./assets/images/online-reputation-management.jpg" alt="A laptop researching Reputation Management" />
-                <h2>Online Reputation Management</h2>
-                <p>
-                    The web is full of opinions, and some of these can be negative. Social media allows anyone with an internet connection to say whatever they want about your business. Online Reputation Management gives you the control over what potential customers see when they search for your business.
-                </p>
+                <img src="./assets/images/online-reputation-management.jpg" alt="A laptop researching Reputation Management" />
+                <summary>
+                    <h2>Online Reputation Management</h2>
+                    <p>
+                        The web is full of opinions, and some of these can be negative. Social media allows anyone with an internet connection to say whatever they want about your business. Online Reputation Management gives you the control over what potential customers see when they search for your business.
+                    </p>
+                </summary>
             </article>
-        </section>
-        <section class="content">
             <article id="social-media-marketing" class="social-media-marketing">
-                <img class="float-left" src="./assets/images/social-media-marketing.jpg" alt="Multiple people discussing social media" />
-                <h2>Social Media Marketing</h2>
-                <p>
-                    Social media continues to have a sizable influence on buying habits. Social media marketing helps you determine which platforms are suited to your brand, using analytics to find the right markets and increase your lead generation.
-                </p>
+                <img src="./assets/images/social-media-marketing.jpg" alt="Multiple people discussing social media" />
+                <summary>
+                    <h2>Social Media Marketing</h2>
+                    <p>
+                        Social media continues to have a sizable influence on buying habits. Social media marketing helps you determine which platforms are suited to your brand, using analytics to find the right markets and increase your lead generation.
+                    </p>
+                </summary>
             </article>
         </section>
     </section>
-    <div class="footer">
+    <!-- again replaced class with proper html element -->
+    <footer>
         <h2>Made with ❤️️ by Horiseon</h2>
         <p>
             &copy; 2023 Horiseon Social Solution Services, Inc.
         </p>
-    </div>
+    </footer>
 </body>
 
 </html>

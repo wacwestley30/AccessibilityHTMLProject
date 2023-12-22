@@ -8,6 +8,8 @@ body {
     background-color: #d9dcd6;
 }
 
+/* added display flex with space between to seperate the h1 and nav
+also took away the class of most divs and replaced with proper html semantic elements */
 header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -17,29 +19,40 @@ header {
     justify-content: space-between;
 }
 
+/* no longer needed inline block */
 h1 {
     font-size: 48px;
 }
 
-header h1 .seo {
+/* did not need parents for singular class */
+.seo {
     color: #d9dcd6;
 }
 
+/* float replaced with flex */
 header nav {
     padding-top: 15px;
     margin-right: 20px;
-    float: right;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
 
-header nav ul {
+/* Added flex instead for both ul and ul li so it maintains placement on bigger
+and smaller screens. Also took away middle children to simplify code. */
+header ul {
     list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
-header nav ul li {
-    display: inline-block;
+header li {
     margin-left: 25px;
+}
+
+/* added a mainSection class and added parents within html to take away float */
+.mainSection {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 a {
@@ -51,150 +64,92 @@ p {
     font-size: 16px;
 }
 
+/* Changed height and width to maintain aspect ratio but also fit the screen.
+Placed url within html to add to the img element. */
 figure img {
     height: auto;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     margin-bottom: 25px;
     background-size: cover;
     background-position: center;
 }
 
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
+/* removed floats */
 .content {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
 
+/* removed floats. changed margins. */
 .benefits {
-    margin: 0px 1% 0px;
+    margin: 0 20px 0;
     padding: 20px;
     clear: both;
-    float: right;
     width: 20%;
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
 }
 
-.benefit-lead {
+/* renamed and combined selectors */
+aside article {
     margin-bottom: 32px;
     color: #ffffff;
 }
 
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
+aside article h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
+aside article img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
+summary {
+    display: flex;
+    flex-direction: column;
 }
 
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.search-engine-optimization {
+.content article {
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
     color: #ffffff;
+    display: flex;
 }
 
 .online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
+    flex-direction: row-reverse;
 }
 
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
+.content img {
     max-height: 200px;
+    margin-right: 25px;
 }
 
 .online-reputation-management img {
-    max-height: 200px;
+    margin-left: 25px;
 }
 
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
+.content h2 {
     margin-bottom: 20px;
     font-size: 36px;
 }
 
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.footer {
+footer {
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
 
-.footer h2 {
+footer h2 {
     font-size: 20px;
 }
